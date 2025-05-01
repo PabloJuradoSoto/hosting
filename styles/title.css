@@ -1,0 +1,23 @@
+.title-container {
+    display: flex;
+}
+
+.titletxt-container {
+    margin-right: 20px;
+    align-items: right;
+    justify-content: right;
+}
+
+.title-name {
+    color: #1e0f61;
+}
+
+.title-description {
+    color: #574ce9;
+}
+
+.title-container img {
+    width: 250px;
+    height: auto;
+    border-radius: 8px;
+}

@@ -1,0 +1,10 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background: radial-gradient(circle at top right, #020514, #060d33, #020514);
+}
