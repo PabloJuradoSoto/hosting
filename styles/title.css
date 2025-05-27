@@ -4,8 +4,7 @@
 
 .titletxt-container {
     margin-right: 20px;
-    align-items: right;
-    justify-content: right;
+    align-items: center;
 }
 
 .title-name {
@@ -13,11 +12,11 @@
 }
 
 .title-description {
-    color: #9ad5e7;
+    color: #63b7e7;
 }
 
 .title-container img {
-    width: 250px;
+    width: 800px;
     height: auto;
     border-radius: 8px;
 }

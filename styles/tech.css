@@ -1,3 +1,14 @@
+.h2-title {
+    text-align: center;
+    color: #fff;
+}
+
+.social-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .tech-container {
     text-align: center;
     color: #fff;
@@ -67,6 +78,11 @@
 .photoshop { --color:  rgba(38, 77, 228, 0.6); }
 .illustrator { --color: rgba(90, 61, 17, 0.6); }
 .csharp { --color: rgba(177, 60, 223, 0.6); }
+.java { --color: rgba(228, 77, 38, 0.6); }
+.c { --color: rgba(38, 77, 228, 0.6); }
+.postgresql { --color: rgba(79, 105, 206, 0.6);}
 .davinci { --color: rgba(118, 237, 241, 0.6); }
 .blender { --color: rgba(253, 115, 0, 0.6); }
 .unity { --color: rgba(148, 148, 148, 0.6); }
+.linkdin { --color: rgba(29, 107, 224, 0.6); }
+.github { --color: rgba(245, 245, 245, 0.6); }
