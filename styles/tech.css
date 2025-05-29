@@ -7,31 +7,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 100px;
 }
 
 .tech-container {
     text-align: center;
     color: #fff;
-}
-
-.tech-card {
-    width: 325px;
-    background-color: #f0f0f0;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-    margin-left: 100px;
-
-    position: relative;
-    overflow: hidden;
-}
-
-.tech-elem img {
-    width: 100px;
-    height: 100px;
-    transition: all 0.3s ease-in-out;
-    border-radius: 20px;
-    background: transparent;
+    margin-bottom: 100px;
+    margin-top: 100px;
 }
 
 .icon {
@@ -55,6 +38,7 @@
 .icon:hover img {
     filter: drop-shadow(0 0 10px var(--color)) brightness(1.2);
 }
+
 .icon .name {
     position: absolute;
     top: -30px;
@@ -70,6 +54,7 @@
     white-space: nowrap;
     backdrop-filter: blur(5px);
 }
+
 .icon:hover .name {
     opacity: 1;
 }
@@ -84,7 +69,7 @@
 .photoshop { --color:  rgba(38, 77, 228, 0.6); }
 .illustrator { --color: rgba(90, 61, 17, 0.6); }
 .csharp { --color: rgba(177, 60, 223, 0.6); }
-.java { --color: rgba(228, 77, 38, 0.6); }
+.java { --color: rgba(38, 77, 228, 0.6); }
 .c { --color: rgba(38, 77, 228, 0.6); }
 .postgresql { --color: rgba(79, 105, 206, 0.6);}
 .davinci { --color: rgba(118, 237, 241, 0.6); }

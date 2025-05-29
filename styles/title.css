@@ -1,23 +1,20 @@
 .title-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     width: 100%;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .title-name {
     color: #ffffff;
-    margin-left: 10%;
 }
 
 .title-description {
     color: #63b7e7;
-    margin-left: 10%;
     width: 100%;
 }
 
 .title-container img {
     width: 30%;
     height: auto;
-    margin-right: 10%;
 }

@@ -12,6 +12,11 @@
     overflow: hidden;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
     margin: 20px;
+    transition: transform 0.2s ease;
+    transform-style: preserve-3d;
+    will-change: transform;
+    perspective: 1000px;
+    transform-origin: center center;
 }
 
 .card img {
@@ -37,7 +42,7 @@
 .card-container .btn {
     display: inline-block;
     padding: 8px 16px;
-    background-color: #333;
+    background-color: #63b7e7;;
     text-decoration: none;
     border-radius: 4px;
     margin-top: 16px;
