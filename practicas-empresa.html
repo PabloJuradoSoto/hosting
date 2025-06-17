@@ -3,10 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/title.css">
     <title>Prácticas Empresa</title>
+    <style>
+        .title-name {
+            text-align: center;
+            color: #63b7e7;
+        }
+        .videoContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+        iframe.bigVideo {
+            width: 80%;
+            max-width: 975px;
+            height: 548px;
+            border: none;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+        iframe.smallVideo {
+            width: 100%;
+            height: 200px;
+            border: none;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+        figcaption {
+            font-size: 25px;
+            color: #ffffff;
+            margin-top: 10px;
+        }
+        .title-description {
+            text-align: center;
+            font-size: 18px;
+            color: #ffffff;
+            max-width: 800px;
+            margin: 0 auto 50px;
+        }
+        .gridVideo {
+            display: flex;
+            gap: 20px;
+            flex-direction: row;
+            margin-bottom: 50px;
+            justify-content: center;
+        }
+        .title-h2 {
+            text-align: center;
+            font-size: 22px;
+            color: #ffffff;
+            max-width: 800px;
+            margin: 0 auto 50px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Prácticas Empresa</h1>
+    <h1 class="title-name">Prácticas Empresa</h1>
     <nav>
         <ul>
             <li><a href="index.html">Inicio</a></li>
@@ -16,5 +71,55 @@
             <li><a href="reel-anim3d.html">Reel Anim3D</a></li>
         </ul>
     </nav>
+
+    <figure class="videoContainer">
+        <iframe class="bigVideo" src="https://www.youtube.com/embed/H4qR2wc7c6I" title="Introducción Stupendos"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <figcaption>Introducción usando el logo, hecho con motion graphics</figcaption>
+    </figure>
+
+    <p class="title-description">
+        Quería conseguir una introducción a los vídeos de presentación de los viajes, de una forma dinámica y divertida.
+    </p>
+    <h2 class="title-h2">Vídeos de los viajes</h2>
+    <section class="gridVideo">
+        <article> <!-- Video Selva Negra -->
+            <iframe class="smallVideo" src="https://www.youtube.com/embed/6EEyjsFTmkE" title="Selva Negra | Stupendos" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <figcaption>Selva Negra</figcaption>
+        </article>
+        <article> <!-- Leyendas de islandia -->
+            <iframe class="smallVideo" src="https://www.youtube.com/embed/dB3hmQbJFKU" title="Leyendas de Islandia | Stupendos" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <figcaption>Leyendas de Islandia</figcaption>
+        </article>
+        <article> <!-- Viaje Argentina -->
+            <iframe class="smallVideo" src="https://www.youtube.com/embed/4AI6ewzN8RY" title="Viaje Argentina" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <figcaption>Viaje Argentina</figcaption>
+        </article>
+    </section>
+    <h2 class="title-h2">Reels para redes sociales</h2>
+    <section class="gridVideo">
+        <article> <!-- Video Selva Negra -->
+            <iframe class="smallVideo" src="https://www.youtube.com/embed/jZKHOhEJAQg" title="Reel Turquía" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <figcaption>Reel Turquía</figcaption>
+        </article>
+        <article> <!-- Leyendas de islandia -->
+            <iframe class="smallVideo" src="https://www.youtube.com/embed/vY9QrAm-e0g" title="Reel London" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <figcaption>Reel London</figcaption>
+        </article>
+        <article> <!-- Viaje Argentina -->
+            <iframe class="smallVideo" src="https://www.youtube.com/embed/AGPo5ECrFxk" title="Reel Instagram Argentina" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <figcaption>Reel Argentina</figcaption>
+        </article>
+    </section>
+    <p class="title-description">
+        Todos los vídeos fueron realizados por mi, con música sin copyright y contenido sin derechos.
+    </p>
 </body>
 </html>

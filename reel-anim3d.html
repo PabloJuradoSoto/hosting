@@ -3,10 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/title.css">
     <title>Reel Animación 3D</title>
+    <style>
+        .title-name {
+            text-align: center;
+            color: #63b7e7;
+        }
+        .videoContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+        iframe.bigVideo {
+            width: 80%;
+            max-width: 975px;
+            height: 548px;
+            border: none;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Reel Animación3D</h1>
+    <h1 class="title-name">Reel Animación3D</h1>
     <nav>
         <ul>
             <li><a href="index.html">Inicio</a></li>
@@ -16,5 +38,10 @@
             <li><a href="reel-composicion.html">Reel Composición</a></li>
         </ul>
     </nav>
+    <section class="videoContainer">
+        <iframe class="bigVideo" src="https://www.youtube.com/embed/wY5hz7XI7mY" title="3D Animation Demo Reel" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+    </section>
 </body>
 </html>

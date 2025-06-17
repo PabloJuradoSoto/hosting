@@ -7,7 +7,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .tech-container {
@@ -67,7 +67,7 @@
 .git { --color: rgba(228, 77, 38, 0.6);  }
 .linux { --color: rgba(245, 189, 12); }
 .photoshop { --color:  rgba(38, 77, 228, 0.6); }
-.illustrator { --color: rgba(90, 61, 17, 0.6); }
+.illustrator { --color: rgba(255, 186, 0, 0.6); }
 .csharp { --color: rgba(177, 60, 223, 0.6); }
 .java { --color: rgba(38, 77, 228, 0.6); }
 .c { --color: rgba(38, 77, 228, 0.6); }
@@ -77,3 +77,8 @@
 .unity { --color: rgba(148, 148, 148, 0.6); }
 .linkdin { --color: rgba(29, 107, 224, 0.6); }
 .github { --color: rgba(245, 245, 245, 0.6); }
+.indesign { --color: rgba(255, 58, 125, 0.6); }
+.python { --color: rgba(255, 244, 41, 0.6); }
+.word { --color: rgba(0, 103, 185, 0.6); }
+.excel { --color: rgba(0, 137, 77, 0.6); }
+.maya { --color: rgba(56, 165, 204, 0.6); }

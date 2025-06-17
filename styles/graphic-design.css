@@ -1,0 +1,96 @@
+.title-name {
+    text-align: center;
+    color: #63b7e7;
+}
+.title-h2 {
+    text-align: center;
+    font-size: 48px;
+    color: #ffffff;
+    margin: 25px auto 25px;
+}
+.grid-container-photoshop {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.grid-container-illustrator {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, auto);
+    grid-auto-rows: 300px;
+    gap: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.banner {
+    grid-column: span 2;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+.cartel {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+.item {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.logo {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+}
+
+.personaje-text {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.motivo-hp {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.skull {
+    grid-column: 1 / span 3;
+    grid-row: 3;
+}
+
+img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.50);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);
+}
+.grid-container-maquetacion {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    flex-wrap: wrap;
+}
+#myPDF {
+    width: 30%;
+    height: 1100px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+}
+.title-description {
+    text-align: center;
+    font-size: 18px;
+    color: #ffffff;
+    margin: 25px auto 150px;
+}

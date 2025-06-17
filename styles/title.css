@@ -5,8 +5,13 @@
     align-items: center;
 }
 
+.titletxt-container {
+    width: 50%;
+}
+
 .title-name {
     color: #ffffff;
+    font-size: 72px;
 }
 
 .title-description {

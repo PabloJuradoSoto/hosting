@@ -1,8 +1,26 @@
-* {
-    box-sizing: border-box;
+html {
+    min-height: 100%;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at top right, #020514, #060d33, #020514);
+    background-attachment: fixed;
     font-family: sans-serif;
 }
 
-body {
-    background: radial-gradient(circle at top right, #020514, #060d33, #020514);
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
 }

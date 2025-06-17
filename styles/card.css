@@ -2,21 +2,28 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 100px;
 }
 
 .card {
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 325px;
     background-color: #f0f0f0;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
     margin: 20px;
-    transition: transform 0.2s ease;
     transform-style: preserve-3d;
     will-change: transform;
     perspective: 1000px;
     transform-origin: center center;
+    z-index: 1;
+}
+  
+.card:hover {
+    transform: scale(1.5);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);
+    z-index: 999;
 }
 
 .card img {

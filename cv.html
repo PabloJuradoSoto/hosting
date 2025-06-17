@@ -3,10 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/title.css">
     <title>CV</title>
+    <style>
+        .title-name {
+            text-align: center;
+            color: #63b7e7;
+        }
+        .pdf-container {
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            margin-bottom: 100px;
+        }
+        #myPDF {
+            width: 30%;
+            height: 1100px;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+        }
+    </style>
 </head>
 <body>
-    <h1>CV</h1>
+    <h1 class="title-name">CV</h1>
     <nav>
         <ul>
             <li><a href="index.html">Inicio</a></li>
@@ -16,5 +37,8 @@
             <li><a href="reel-anim3d.html">Reel Anim3D</a></li>
         </ul>
     </nav>
+    <div class="pdf-container">
+        <iframe id="myPDF" src="assets/CV Pablo Jurado.pdf"></iframe>
+    </div>
 </body>
 </html>
