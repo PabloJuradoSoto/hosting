@@ -65,12 +65,15 @@
 .react { --color: rgba(97, 218, 251, 0.6); }
 .node { --color: rgba(140, 200, 75, 0.6); }
 .git { --color: rgba(228, 77, 38, 0.6);  }
-.linux { --color: rgba(245, 189, 12); }
+.linux { --color: rgba(245, 189, 12, 0.6); }
+.docker { --color: rgba(0, 99, 241, 0.6); }
+.wordpress { --color: rgba(0, 118, 158, 0.6); }
 .photoshop { --color:  rgba(38, 77, 228, 0.6); }
 .illustrator { --color: rgba(255, 186, 0, 0.6); }
 .csharp { --color: rgba(177, 60, 223, 0.6); }
 .java { --color: rgba(38, 77, 228, 0.6); }
 .c { --color: rgba(38, 77, 228, 0.6); }
+.php { --color: rgba(118, 124, 182, 0.6); }
 .postgresql { --color: rgba(79, 105, 206, 0.6);}
 .davinci { --color: rgba(118, 237, 241, 0.6); }
 .blender { --color: rgba(253, 115, 0, 0.6); }
