@@ -140,6 +140,37 @@ header {
     top: -36px;
 }
 
+/* === CV HEADER BUTTON === */
+.cv-header-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0.5rem;
+}
+
+.cv-header-btn .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(135deg, rgba(99, 183, 231, 0.15), rgba(168, 85, 247, 0.15));
+    border: 1px solid rgba(99, 183, 231, 0.2);
+    text-decoration: none;
+    border-radius: 10px;
+    color: #63b7e7;
+    font-weight: 500;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.cv-header-btn .btn:hover {
+    background: linear-gradient(135deg, rgba(99, 183, 231, 0.25), rgba(168, 85, 247, 0.25));
+    border-color: #63b7e7;
+    box-shadow: 0 4px 20px rgba(99, 183, 231, 0.2);
+    transform: translateY(-2px);
+}
+
 /* === RESPONSIVE === */
 @media (max-width: 768px) {
     .title-container {

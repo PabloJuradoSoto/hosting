@@ -3,46 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño Gráfico</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/title.css">
     <link rel="stylesheet" href="styles/graphic-design.css">
-    <title>Diseño Gráfico</title>
 </head>
 <body>
-    <h1 class="title-name">Diseño Gráfico</h1>
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="cv.html">CV</a></li>
-            <li><a href="practicas-empresa.html">Prácticas Empresa</a></li>
-            <li><a href="reel-composicion.html">Reel Composición</a></li>
-            <li><a href="reel-anim3d.html">Reel Anim3D</a></li>
-        </ul>
-    </nav>
+    <header>
+        <div class="title-container" style="max-width: 1200px; margin: 0 auto;">
+            <div class="titletxt-container" style="width: 100%; text-align: center;">
+                <h1 class="page-title">Diseño Gráfico</h1>
+                <p class="page-subtitle">Banners, carteles, ilustraciones y maquetación — todos mis trabajos de diseño</p>
+            </div>
+        </div>
+    </header>
 
-    <h2 class="title-h2">Banners</h2>
-    <section class="grid-container-photoshop">
-        <img class="banner" src="assets/pics/banner-grefu.jpg" alt="Grefu">
-        <img class="banner" src="assets/pics/banner-chab.png" alt="Chab">
-        <img class="banner" src="assets/pics/banner-semorka.png" alt="Semorka">
-        <img class="cartel" src="assets/pics/cartel-cd-lol.jpg" alt="Cartel CD LOL">
-        <img class="cartel" src="assets/pics/cartel-jinx.jpg" alt="Cartel Jinx">
-    </section>
+    <main>
+        <!-- TOP BACK BUTTON -->
+        <div class="back-container top-back">
+            <a href="index.html" class="back-btn">Volver al inicio</a>
+        </div>
 
-    <h2 class="title-h2">Carteles</h2>
-    <section class="grid-container-illustrator">
-        <img class="item logo" src="assets/pics/logo.png" alt="Logo">
-        <img class="item personaje-text" src="assets/pics/personaje-text.jpg" alt="Logo">
-        <img class="item motivo-hp" src="assets/pics/motivo-hp.jpg" alt="Logo">
-        <img class="item skull" src="assets/pics/skull.jpg" alt="Logo">
-    </section>
+        <!-- BANNERS (Photoshop) -->
+        <div class="section-divider">
+            <h2>Banners</h2>
+        </div>
+        <section class="grid-container-photoshop">
+            <img class="banner" src="assets/pics/banner-grefu.jpg" alt="Grefu">
+            <img class="banner" src="assets/pics/banner-chab.png" alt="Chab">
+            <img class="banner" src="assets/pics/banner-semorka.png" alt="Semorka">
+            <img class="cartel" src="assets/pics/cartel-cd-lol.jpg" alt="Cartel CD LOL">
+            <img class="cartel" src="assets/pics/cartel-jinx.jpg" alt="Cartel Jinx">
+        </section>
 
-    <h2 class="title-h2">Maquetación</h2>
-    <section class="grid-container-maquetacion">
-        <iframe id="myPDF" src="assets/identidad-corporativa.pdf"></iframe>
-        <p class="title-description">Manual de identidad corporativa</p>
-        <iframe id="myPDF" src="assets/catalogo.pdf"></iframe>
-        <p class="title-description">Cátalogo</p>
-    </section>
+        <!-- CARTELES (Illustrator) -->
+        <div class="section-divider">
+            <h2>Carteles</h2>
+        </div>
+        <section class="grid-container-illustrator">
+            <img class="item logo" src="assets/pics/logo.png" alt="Logo">
+            <img class="item personaje-text" src="assets/pics/personaje-text.jpg" alt="Personaje Text">
+            <img class="item motivo-hp" src="assets/pics/motivo-hp.jpg" alt="Motivo HP">
+            <img class="item skull" src="assets/pics/skull.jpg" alt="Skull">
+        </section>
+
+        <!-- MAQUETACIÓN (PDFs) -->
+        <div class="section-divider">
+            <h2>Maquetación</h2>
+        </div>
+        <section class="pdf-showcase">
+            <div class="pdf-item">
+                <div class="pdf-wrapper">
+                    <iframe src="assets/identidad-corporativa.pdf" title="Manual de identidad corporativa"></iframe>
+                    <div class="pdf-overlay">
+                        <a href="assets/identidad-corporativa.pdf" target="_blank" class="pdf-action">Abrir en nueva pestaña</a>
+                        <a href="assets/identidad-corporativa.pdf" download class="pdf-action pdf-download">Descargar</a>
+                    </div>
+                </div>
+                <p class="pdf-caption">Manual de identidad corporativa</p>
+            </div>
+            <div class="pdf-item">
+                <div class="pdf-wrapper">
+                    <iframe src="assets/catalogo.pdf" title="Catálogo"></iframe>
+                    <div class="pdf-overlay">
+                        <a href="assets/catalogo.pdf" target="_blank" class="pdf-action">Abrir en nueva pestaña</a>
+                        <a href="assets/catalogo.pdf" download class="pdf-action pdf-download">Descargar</a>
+                    </div>
+                </div>
+                <p class="pdf-caption">Catálogo</p>
+            </div>
+        </section>
+
+        <!-- BACK BUTTON -->
+        <div class="back-container">
+            <a href="index.html" class="back-btn">Volver al inicio</a>
+        </div>
+    </main>
 </body>
 </html>

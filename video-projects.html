@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos Audiovisuales</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/title.css">
+    <link rel="stylesheet" href="styles/card.css">
+    <style>
+        /* === PAGE TITLE === */
+        .page-title {
+            text-align: center;
+            color: #ffffff;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            margin: 2rem 0 0.5rem;
+            background: linear-gradient(135deg, #ffffff 0%, #63b7e7 50%, #a855f7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .page-subtitle {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            animation: fadeInUp 0.8s ease-out 0.1s both;
+        }
+
+        /* === SECTION DIVIDER === */
+        .section-divider {
+            text-align: center;
+            margin: 3rem 0 2rem;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .section-divider h2 {
+            color: #ffffff;
+            font-size: clamp(1.5rem, 2.5vw, 2rem);
+            font-weight: 700;
+            display: inline-block;
+            position: relative;
+        }
+
+        .section-divider h2::after {
+            content: '';
+            display: block;
+            width: 60%;
+            height: 3px;
+            margin: 0.5rem auto 0;
+            background: linear-gradient(90deg, transparent, #63b7e7, #a855f7, transparent);
+            border-radius: 2px;
+        }
+
+        /* === VIDEO CONTAINER === */
+        .video-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .video-featured {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 3rem;
+            animation: fadeInUp 0.8s ease-out both;
+        }
+
+        .video-featured:nth-child(1) { animation-delay: 0.1s; }
+        .video-featured:nth-child(2) { animation-delay: 0.2s; }
+        .video-featured:nth-child(3) { animation-delay: 0.3s; }
+
+        iframe.big-video {
+            width: 100%;
+            max-width: 975px;
+            height: 548px;
+            border: none;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        iframe.small-video {
+            width: 100%;
+            height: 200px;
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .video-caption {
+            font-size: 1.2rem;
+            color: #63b7e7;
+            margin-top: 0.75rem;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .video-description {
+            text-align: center;
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            line-height: 1.6;
+            animation: fadeInUp 0.8s ease-out 0.15s both;
+        }
+
+        /* === VIDEO GRID === */
+        .video-grid {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 3rem;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .video-grid article {
+            flex: 1 1 280px;
+            max-width: 350px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 16px;
+            padding: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .video-grid article:hover {
+            transform: translateY(-6px);
+            border-color: rgba(99, 183, 231, 0.2);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .video-grid figcaption {
+            font-size: 1rem;
+            color: #ffffff;
+            margin-top: 0.75rem;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        /* === BACK BUTTON === */
+        .back-container {
+            text-align: center;
+            margin: 3rem 0 4rem;
+            animation: fadeInUp 0.8s ease-out 0.3s both;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 2rem;
+            background: linear-gradient(135deg, rgba(99, 183, 231, 0.15), rgba(168, 85, 247, 0.15));
+            border: 1px solid rgba(99, 183, 231, 0.2);
+            text-decoration: none;
+            border-radius: 12px;
+            color: #63b7e7;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn::before {
+            content: '←';
+            transition: transform 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background: linear-gradient(135deg, rgba(99, 183, 231, 0.25), rgba(168, 85, 247, 0.25));
+            border-color: #63b7e7;
+            box-shadow: 0 4px 20px rgba(99, 183, 231, 0.2);
+            transform: translateX(-4px);
+        }
+
+        .back-btn:hover::before {
+            transform: translateX(-4px);
+        }
+
+        /* === RESPONSIVE === */
+        @media (max-width: 768px) {
+            iframe.big-video {
+                height: 250px;
+            }
+
+            iframe.small-video {
+                height: 180px;
+            }
+
+            .video-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .video-grid article {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="title-container" style="max-width: 1200px; margin: 0 auto;">
+            <div class="titletxt-container" style="width: 100%; text-align: center;">
+                <h1 class="page-title">Proyectos Audiovisuales</h1>
+                <p class="page-subtitle">Todos mis trabajos de vídeo: motion graphics, edición, composición y animación 3D</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- TOP BACK BUTTON -->
+        <div class="back-container" style="margin: 0 0 1rem;">
+            <a href="index.html" class="back-btn">Volver al inicio</a>
+        </div>
+
+        <!-- === PRÁCTICAS EMPRESA === -->
+        <div class="section-divider">
+            <h2>Prácticas Empresa</h2>
+        </div>
+        <section class="video-section">
+            <p class="video-description">
+                Todos los vídeos fueron realizados por mí, con música sin copyright y contenido sin derechos.
+            </p>
+
+            <div class="video-featured">
+                <iframe class="big-video" src="https://www.youtube.com/watch?v=H4qR2wc7c6I" 
+                    title="Introducción Stupendos"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+                <figcaption class="video-caption">Introducción usando el logo, hecho con motion graphics</figcaption>
+            </div>
+
+            <p class="video-description">
+                Quería conseguir una introducción a los vídeos de presentación de los viajes, de una forma dinámica y divertida.
+            </p>
+
+            <h3 style="text-align: center; color: rgba(255,255,255,0.8); font-size: 1.3rem; margin: 2rem 0 1.5rem; font-weight: 600;">Vídeos de los viajes</h3>
+            <div class="video-grid">
+                <article>
+                    <iframe class="small-video" src="https://www.youtube.com/embed/6EEyjsFTmkE" 
+                        title="Selva Negra | Stupendos"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
+                    <figcaption>Selva Negra</figcaption>
+                </article>
+                <article>
+                    <iframe class="small-video" src="https://www.youtube.com/embed/dB3hmQbJFKU" 
+                        title="Leyendas de Islandia | Stupendos"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
+                    <figcaption>Leyendas de Islandia</figcaption>
+                </article>
+                <article>
+                    <iframe class="small-video" src="https://www.youtube.com/embed/4AI6ewzN8RY" 
+                        title="Viaje Argentina"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
+                    <figcaption>Viaje Argentina</figcaption>
+                </article>
+            </div>
+
+            <h3 style="text-align: center; color: rgba(255,255,255,0.8); font-size: 1.3rem; margin: 2rem 0 1.5rem; font-weight: 600;">Reels para redes sociales</h3>
+            <div class="video-grid">
+                <article>
+                    <iframe class="small-video" src="https://www.youtube.com/embed/jZKHOhEJAQg" 
+                        title="Reel Turquía"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
+                    <figcaption>Reel Turquía</figcaption>
+                </article>
+                <article>
+                    <iframe class="small-video" src="https://www.youtube.com/embed/vY9QrAm-e0g" 
+                        title="Reel London"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
+                    <figcaption>Reel London</figcaption>
+                </article>
+                <article>
+                    <iframe class="small-video" src="https://www.youtube.com/embed/AGPo5ECrFxk" 
+                        title="Reel Instagram Argentina"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
+                    <figcaption>Reel Argentina</figcaption>
+                </article>
+            </div>
+        </section>
+
+        <!-- === REEL COMPOSICIÓN === -->
+        <div class="section-divider">
+            <h2>Reel Composición</h2>
+        </div>
+        <section class="video-section">
+            <div class="video-featured">
+                <iframe class="big-video" src="https://www.youtube.com/embed/iQgjweFjk9s" 
+                    title="Reel Composición"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+                <figcaption class="video-caption">Reel de Composición de Vídeo</figcaption>
+            </div>
+        </section>
+
+        <!-- === REEL ANIMACIÓN 3D === -->
+        <div class="section-divider">
+            <h2>Reel Animación 3D</h2>
+        </div>
+        <section class="video-section">
+            <div class="video-featured">
+                <iframe class="big-video" src="https://www.youtube.com/embed/wY5hz7XI7mY" 
+                    title="3D Animation Demo Reel"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+                <figcaption class="video-caption">Reel de Animación 3D</figcaption>
+            </div>
+        </section>
+
+        <!-- === BACK BUTTON === -->
+        <div class="back-container">
+            <a href="index.html" class="back-btn">Volver al inicio</a>
+        </div>
+    </main>
+</body>
+</html>

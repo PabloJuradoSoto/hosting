@@ -4,8 +4,6 @@ notas_secretas.md
 
 # Ignorar una carpeta entera (ideal para el motor que te colgó el PC):
 .codebase-memory/
-node_modules/
-target/
 
 # Ignorar por extensión (cualquier archivo que termine así):
 *.log

@@ -1,55 +1,125 @@
-.title-name {
+/* === PAGE TITLE === */
+.page-title {
     text-align: center;
-    color: #63b7e7;
-}
-.title-h2 {
-    text-align: center;
-    font-size: 48px;
     color: #ffffff;
-    margin: 25px auto 25px;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    margin: 2rem 0 0.5rem;
+    background: linear-gradient(135deg, #ffffff 0%, #63b7e7 50%, #a855f7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: fadeInUp 0.8s ease-out;
 }
+
+.page-subtitle {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    animation: fadeInUp 0.8s ease-out 0.1s both;
+}
+
+/* === SECTION DIVIDER === */
+.section-divider {
+    text-align: center;
+    margin: 3rem 0 2rem;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.section-divider h2 {
+    color: #ffffff;
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-weight: 700;
+    display: inline-block;
+    position: relative;
+}
+
+.section-divider h2::after {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 3px;
+    margin: 0.5rem auto 0;
+    background: linear-gradient(90deg, transparent, #63b7e7, #a855f7, transparent);
+    border-radius: 2px;
+}
+
+/* === BANNERS GRID (Photoshop) === */
 .grid-container-photoshop {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, auto);
-    gap: 20px;
-    padding: 20px;
+    gap: 1.25rem;
+    padding: 1rem;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto 3rem;
+    animation: fadeInUp 0.8s ease-out 0.15s both;
 }
-.grid-container-illustrator {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(6, auto);
-    grid-auto-rows: 300px;
-    gap: 10px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+
 .banner {
     grid-column: span 2;
     width: 100%;
     height: auto;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(255, 255, 255, 0.06);
 }
+
+.banner:hover {
+    transform: scale(1.02);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4), 0 0 30px rgba(99, 183, 231, 0.08);
+    border-color: rgba(99, 183, 231, 0.15);
+}
+
 .cartel {
     width: 100%;
     height: auto;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(255, 255, 255, 0.06);
 }
+
+.cartel:hover {
+    transform: scale(1.03);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4), 0 0 30px rgba(99, 183, 231, 0.08);
+    border-color: rgba(99, 183, 231, 0.15);
+}
+
+/* === CARTELES GRID (Illustrator) === */
+.grid-container-illustrator {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+    padding: 0 1rem;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
 .item {
     width: 100%;
     aspect-ratio: 4 / 3;
     object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.item:hover {
+    transform: scale(1.04);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4), 0 0 30px rgba(99, 183, 231, 0.08);
+    border-color: rgba(99, 183, 231, 0.15);
 }
 
 .logo {
     grid-column: 1 / span 2;
     grid-row: 1 / span 2;
+    aspect-ratio: auto;
 }
 
 .personaje-text {
@@ -67,30 +137,193 @@
     grid-row: 3;
 }
 
-img {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-img:hover {
-    transform: scale(1.50);
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);
-}
-.grid-container-maquetacion {
+/* === MAQUETACIÓN SHOWCASE (PDFs) === */
+.pdf-showcase {
     display: flex;
     justify-content: center;
-    height: 100%;
     flex-wrap: wrap;
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+    padding: 0 1rem;
+    animation: fadeInUp 0.8s ease-out 0.25s both;
 }
-#myPDF {
-    width: 30%;
-    height: 1100px;
+
+.pdf-item {
+    flex: 1 1 400px;
+    max-width: 550px;
+    transition: transform 0.3s ease;
+}
+
+.pdf-item:hover {
+    transform: translateY(-6px);
+}
+
+.pdf-wrapper {
+    position: relative;
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s ease;
+}
+
+.pdf-wrapper:hover {
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4), 0 0 30px rgba(99, 183, 231, 0.1);
+    border-color: rgba(99, 183, 231, 0.2);
+}
+
+.pdf-wrapper iframe {
+    width: 100%;
+    height: 650px;
+    display: block;
     border: none;
-    border-radius: 15px;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.15);
 }
-.title-description {
-    text-align: center;
-    font-size: 18px;
+
+/* === PDF OVERLAY === */
+.pdf-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    padding: 1rem;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.75) 40%);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.pdf-wrapper:hover .pdf-overlay {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.pdf-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 1.2rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    text-decoration: none;
+    border-radius: 8px;
     color: #ffffff;
-    margin: 25px auto 150px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.pdf-action:hover {
+    background: rgba(99, 183, 231, 0.25);
+    border-color: #63b7e7;
+    box-shadow: 0 4px 16px rgba(99, 183, 231, 0.2);
+}
+
+.pdf-download {
+    background: linear-gradient(135deg, rgba(99, 183, 231, 0.2), rgba(168, 85, 247, 0.2));
+    border-color: rgba(99, 183, 231, 0.3);
+}
+
+.pdf-caption {
+    text-align: center;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0.75rem 0 0;
+    font-weight: 500;
+}
+
+/* === BACK BUTTON === */
+.back-container {
+    text-align: center;
+    margin: 2rem 0 4rem;
+    animation: fadeInUp 0.8s ease-out 0.3s both;
+}
+
+.top-back {
+    margin: 0 0 1rem;
+    animation: fadeInUp 0.8s ease-out 0.05s both;
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 2rem;
+    background: linear-gradient(135deg, rgba(99, 183, 231, 0.15), rgba(168, 85, 247, 0.15));
+    border: 1px solid rgba(99, 183, 231, 0.2);
+    text-decoration: none;
+    border-radius: 12px;
+    color: #63b7e7;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.back-btn::before {
+    content: '←';
+    transition: transform 0.3s ease;
+}
+
+.back-btn:hover {
+    background: linear-gradient(135deg, rgba(99, 183, 231, 0.25), rgba(168, 85, 247, 0.25));
+    border-color: #63b7e7;
+    box-shadow: 0 4px 20px rgba(99, 183, 231, 0.2);
+    transform: translateX(-4px);
+}
+
+.back-btn:hover::before {
+    transform: translateX(-4px);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+    .grid-container-photoshop {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .banner {
+        grid-column: span 1;
+    }
+
+    .grid-container-illustrator {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    .logo {
+        grid-column: 1 / span 2;
+        grid-row: auto;
+    }
+
+    .personaje-text {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .motivo-hp {
+        grid-column: 2;
+        grid-row: auto;
+    }
+
+    .skull {
+        grid-column: 1 / span 2;
+        grid-row: auto;
+    }
+
+    .pdf-wrapper iframe {
+        height: 450px;
+    }
+
+    .pdf-showcase {
+        gap: 1.5rem;
+    }
 }

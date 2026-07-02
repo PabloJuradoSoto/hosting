@@ -92,6 +92,7 @@
 .word { --color: rgba(0, 103, 185, 0.8); }
 .excel { --color: rgba(0, 137, 77, 0.8); }
 .maya { --color: rgba(56, 165, 204, 0.8); }
+.cv-download { --color: rgba(99, 183, 231, 0.8); }
 
 /* === RESPONSIVE === */
 @media (max-width: 768px) {
