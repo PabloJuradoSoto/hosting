@@ -1,14 +1,54 @@
-html {
-    min-height: 100%;
+/* === RESET & BASE === */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+html {
+    min-height: 100%;
+    scroll-behavior: smooth;
+}
 
 body {
     margin: 0;
     padding: 0;
-    background: radial-gradient(circle at top right, #020514, #060d33, #020514);
+    font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    background: linear-gradient(135deg, #0a0a1a 0%, #1a1a3e 30%, #0d0d2b 60%, #0a0a1a 100%);
     background-attachment: fixed;
-    font-family: sans-serif;
+    color: #e0e0e0;
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* === ANIMACIÓN DE FONDO SUTIL === */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(ellipse at 20% 50%, rgba(99, 183, 231, 0.06) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(168, 85, 247, 0.05) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 80%, rgba(236, 72, 153, 0.04) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+    animation: ambientGlow 12s ease-in-out infinite alternate;
+}
+
+@keyframes ambientGlow {
+    0% { opacity: 0.5; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.02); }
+    100% { opacity: 0.6; transform: scale(0.98); }
+}
+
+/* === NAV (mejorado) === */
+nav {
+    position: relative;
+    z-index: 10;
 }
 
 nav ul {
@@ -21,6 +61,62 @@ nav ul {
 }
 
 nav a {
-    color: white;
+    color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #63b7e7;
+}
+
+/* === ANIMACIONES DE ENTRADA === */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* === FOOTER (opcional) === */
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.85rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* === SCROLLBAR PERSONALIZADA === */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #63b7e7, #a855f7);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #7cc8f7, #b86aff);
 }
